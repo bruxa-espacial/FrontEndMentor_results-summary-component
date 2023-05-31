@@ -19,6 +19,12 @@
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+body{
+    background-color: var(--paleBlue);
+    margin: 0;
+    padding: 0;
+}
+
 section{
     display: flex;
     justify-content: space-between;
@@ -35,12 +41,13 @@ section{
     width: 70%;
     margin: auto;
     padding: 1px;
-    background-image: linear-gradient(to bottom, var(--violetBlue), var(--persianBlue));
+    background-image: linear-gradient(var(--violetBlue), var(--persianBlue));
     text-align: center;
 }
 
 .boxScore{
-    background-image: linear-gradient(to bottom, var(--lightSlateBlue), var(--lightRoyalBlue));
+    order: 1;
+    background-image: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
     width: 45%;
     border-radius: 15px;
     margin:0;
@@ -53,6 +60,7 @@ p{
 }
 
 .boxSummary{
+    order: 2;
     width: 45%;
     padding-bottom: 0;
     padding-left: 10px;
@@ -68,4 +76,21 @@ button{
 
 footer{
     margin-top: 10px;
+}
+
+@media (max-width: 375px){
+    section{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+    .boxScore{
+        width: 100%;
+        border-radius: 0;
+    }
+    .boxSummary{
+        width: 100%;
+    }
 }
