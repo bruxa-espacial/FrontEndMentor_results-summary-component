@@ -19,78 +19,151 @@
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
-body{
-    background-color: var(--paleBlue);
-    margin: 0;
-    padding: 0;
+#page {
+    /*se refere à toda a página*/
+    display: flex;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 500;
+    align-content: center;
+    justify-content: center;
 }
 
-section{
+.box{
+    /*se refere à caixa no centro da tela*/
+    width: 60%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    box-shadow: 1px 1px 5px;
-    border-radius: 15px;
-    width:70%;
-    margin: auto;
-    padding: 0px;
-}
-
-.circle{
-    border-radius: 90%;
-    width: 70%;
-    margin: auto;
-    padding: 1px;
-    background-image: linear-gradient(var(--violetBlue), var(--persianBlue));
-    text-align: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 50px var(--darkGrayBlue);
 }
 
 .boxScore{
-    order: 1;
-    background-image: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
+    /*se refere ao conteiner que exibe a pontuação*/
+    background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue) 100%);
+    color: var(--white);
     width: 45%;
-    border-radius: 15px;
-    margin:0;
-    padding: 15px;
+    height: auto;
     text-align: center;
+    border-radius: 30px;
 }
 
-p{
-    font-size: 14px;
+.boxScore h2{
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--lightLavender);
+}
+
+.circle{
+    background: linear-gradient(var(--violetBlue), var(--persianBlue));
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    align-content: center;
+}
+
+.circle h1{
+    margin: 0;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.circle p{
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--lightLavender);
+}
+
+.text p{
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--lightLavender);
 }
 
 .boxSummary{
-    order: 2;
+    /*se refere ao conteiner que exibe o resumo*/
     width: 45%;
-    padding-bottom: 0;
-    padding-left: 10px;
+    padding: 10px;
 }
 
-.item{
-    font-size: 15px;
+.space{
+    width: 80%;
+    justify-content: center;
+    padding: 10px;
+}
+
+.space h1{
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 2px 10px;
+}
+
+.score{
+    width: 100%;
+    display: flex;
+}
+
+.reaction{
+    background-color: hsla(0, 100%, 67%, 0.1);
+    border-radius: 10px;
+}
+
+.reaction .title{
+    color: var(--lightRed);
+}
+
+.memory{
+    background-color: hsla(39, 100%, 56%, 0.1);
+    border-radius: 10px;
+}
+
+.memory .title {
+    color: var(--orangeyYellow);
+}
+
+.verbal{
+    background-color: hsla(166, 100%, 37%, 0.1);
+    border-radius: 10px;
+}
+
+.verbal .title{
+    color: var(--greenTeal);
+}
+
+.visual{
+    background-color: hsla(234, 85%, 45%, 0.1);
+    border-radius: 10px;
+}
+
+.visual .title{
+    color: var(--cobaltBlue);
+}
+
+.point {
+    font-weight: 700;
+}
+
+.max {
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: 800;
 }
 
 button{
-    margin: 10px;
-}
-
-footer{
-    margin-top: 10px;
-}
-
-@media (max-width: 375px){
-    section{
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        border-radius: 0;
-    }
-    .boxScore{
-        width: 100%;
-        border-radius: 0;
-    }
-    .boxSummary{
-        width: 100%;
-    }
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    padding: 10px 30px;
+    width:100%;
+    border: 0;
+    margin: 20px 0;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
 }
